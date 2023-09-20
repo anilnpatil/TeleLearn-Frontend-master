@@ -1,12 +1,12 @@
 <div class="container justify-content-center">
-    <header class="h3 text-center">Czasomierz</header>
-    <p>Czasomierz ma na celu pomóc w rejestrowaniu czasu nauki. Czasomierze są oddzielne dla każdego użytkownika oraz <span class="text-danger">NIE synchronizują się między urządzeniami</span>.</p>
+    <header class="h3 text-center">Timepiece</header>
+    <p>The timer is designed to help you record your study time. Timers are separate for each user and <span class="text-danger">They do NOT sync between devices</span>.</p>
     <app-error-bar *ngIf="error" [errorMessage]="errorMessage"></app-error-bar>
     <div *ngIf="scheduleRecord" class="task-info">
-        <div class="h5">Aktualne zadanie: {{ scheduleRecord.task.name }}</div>
-        <div >Zaplanowany czas nauki: <span class="bold">{{ scheduleRecord.plannedTime.hours }}:{{ scheduleRecord.plannedTime.minutes | number:'2.0-0' }}</span></div>
-        <div >Zrealizowany wcześniej czas nauki: <span class="bold">{{ scheduleRecord.learningTime.hours }}:{{ scheduleRecord.learningTime.minutes | number:'2.0-0' }}</span></div>
-        <a routerLink="/learn/{{ scheduleRecord.id }}">Przejdź do wpisu w planie</a>
+        <div class="h5">Current task: {{ scheduleRecord.task.name }}</div>
+        <div >Scheduled study time: <span class="bold">{{ scheduleRecord.plannedTime.hours }}:{{ scheduleRecord.plannedTime.minutes | number:'2.0-0' }}</span></div>
+        <div >Previously completed study time: <span class="bold">{{ scheduleRecord.learningTime.hours }}:{{ scheduleRecord.learningTime.minutes | number:'2.0-0' }}</span></div>
+        <a routerLink="/learn/{{ scheduleRecord.id }}">Go to the plan entry</a>
     </div>
     <div class="timer-main d-flex flex-column" *ngIf="timer && currentTime &&!saveTimer">
         <div class="d-flex align-items-center justify-content-center flex-wrap">

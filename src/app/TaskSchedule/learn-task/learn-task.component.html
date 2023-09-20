@@ -1,18 +1,18 @@
 <app-error-bar *ngIf="error" [errorMessage]="errorMessage"></app-error-bar>
 <div *ngIf="scheduleRecord">
-    <header class="h3 text-center">Wykonywanie zadania</header>
+    <header class="h3 text-center">Completing a task</header>
     <app-task [task]="scheduleRecord.task"></app-task>
     <p class="h5 text-center">
-        Realizacja planu:
+        Implementation of the plan:
         <span class="bold">{{ scheduleRecord.learningTime.hours }}:{{ scheduleRecord.learningTime.minutes | number:'2.0-0' }}</span>&nbsp;/&nbsp;<span class="bold">{{ scheduleRecord.plannedTime.hours }}:{{ scheduleRecord.plannedTime.minutes | number:'2.0-0' }}</span>
     </p>
-    <header class="button-header h5 text-center">Zarejestruj naukę:</header>
+    <header class="button-header h5 text-center">Register learning:</header>
     <ul *ngIf="!showManualRecordFrom">
         <li>
-            <button class="btn btn-primary" (click)="showManualRecordFrom = true">Wprowadź dane</button>
+            <button class="btn btn-primary" (click)="showManualRecordFrom = true">enter data</button>
         </li>
         <li>
-            <button (click)="OnTimerOption()" class="btn btn-primary">Uruchom czasomierz</button>
+            <button (click)="OnTimerOption()" class="btn btn-primary">Start the timer</button>
         </li>
     </ul>
     <div class="d-flex justify-content-center" *ngIf="showManualRecordFrom">
