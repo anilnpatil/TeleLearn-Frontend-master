@@ -30,7 +30,7 @@ export class UserStatsComponent implements OnInit {
   }
 
   GetTimeDescription(time: Time): string {
-    return `${time.hours} godzin${this.GetHourSuffix(time.hours)} i ${time.minutes} minut${this.GetMinuteSuffix(time.minutes)}`;
+    return `${time.hours} hours${this.GetHourSuffix(time.hours)} and ${time.minutes} minutes${this.GetMinuteSuffix(time.minutes)}`;
   }
 
   GetHourSuffix(hours: number): string {

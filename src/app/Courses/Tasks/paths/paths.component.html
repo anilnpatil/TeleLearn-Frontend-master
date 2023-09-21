@@ -1,16 +1,16 @@
-<div class="h4 text-center">Ścieżki kursu</div>
+<div class="h4 text-center">Course paths</div>
 <app-error-bar *ngIf="error" [errorMessage]="errorMessage"></app-error-bar>
 <div *ngIf="course && IsCurrentUserTeacher()" class="add-task d-flex justify-content-center">
     <a class="btn btn-primary d-flex align-items-center" routerLink="/course/{{ course.id }}/task/add">
         <i class="material-icons">add_task</i>
         <div class="separator"></div>
-         Dodaj zadanie
+        Add a task
     </a>
     <div class="separator"></div>
     <a class="btn btn-secondary d-flex align-items-center" routerLink="/course/{{ course.id }}/composer">
         <i class="material-icons">add_task</i>
         <div class="separator"></div>
-         Otwórz edytor
+        Open the editor
     </a>
 </div>
 <div class="graph-container shadow-sm" *ngIf="course && tasks">

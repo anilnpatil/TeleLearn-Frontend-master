@@ -16,12 +16,12 @@
         </button>
     </div>
     <div *ngIf="form.controls.hours.errors" class="text-danger">
-        <div *ngIf="form.controls.hours.errors.required">Podaj liczbę godzin</div>
-        <div *ngIf="form.controls.hours.errors.min">Nieprawidłowa liczba godzin</div>
-        <div *ngIf="form.controls.hours.errors.max">Nie można planować na więcej niż 1 dzień</div>
+        <div *ngIf="form.controls.hours.errors.required">Enter the number of hours</div>
+        <div *ngIf="form.controls.hours.errors.min">Incorrect number of hours</div>
+        <div *ngIf="form.controls.hours.errors.max">You cannot plan for more than 1 day</div>
     </div>
     <div *ngIf="form.controls.minutes.errors" class="text-danger">
-        <div *ngIf="form.controls.minutes.errors.required">Podaj liczbę minut</div>
-        <div *ngIf="form.controls.minutes.errors.min || form.controls.minutes.errors.max">Nieprawidłowa liczba minut</div>
+        <div *ngIf="form.controls.minutes.errors.required">Enter the number of minutes</div>
+        <div *ngIf="form.controls.minutes.errors.min || form.controls.minutes.errors.max">Incorrect number of minutes</div>
     </div>
 </form>

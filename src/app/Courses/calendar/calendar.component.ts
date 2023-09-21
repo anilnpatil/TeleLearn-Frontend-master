@@ -30,7 +30,7 @@ export class CalendarComponent implements OnInit {
       left: 'title',
     },
     firstDay: 1,
-    locale: 'PL',
+    locale: 'En',
     dayMaxEventRows: 1,
     height: 'auto'
   };

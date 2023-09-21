@@ -65,7 +65,7 @@ export class ConversationComponent implements OnInit, IError {
     this.error = false;
     const msg = this.sendMessageForm.value.message;
     if (!msg) {
-      this.errorMessage = 'Nie można wysłać pustej wiadomości';
+      this.errorMessage = 'You cannot send a blank message';
       this.error = true;
       return;
     }

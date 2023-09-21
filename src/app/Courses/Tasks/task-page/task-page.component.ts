@@ -41,7 +41,7 @@ export class TaskPageComponent implements OnInit {
   }
 
   OnTaskDelete() {
-    if (confirm('Operacja jest nieodwracalna! Kontynuować?')) {
+    if (confirm('The Operation is irreversible! To continue?')) {
       this.taskService.DeleteTask(this.task.id).subscribe(
         dt => {
           this.deleteSucces = true;

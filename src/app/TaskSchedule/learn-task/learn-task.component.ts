@@ -62,7 +62,7 @@ export class LearnTaskComponent implements OnInit {
     if (this.learnTimerService.SetTimer(this.scheduleRecord.id)) {
       this.router.navigateByUrl('/timer');
     } else {
-      Utils.HandleError(this, {error: {message: 'Czasomierz jest już ustawiony. Aby go uruchomić dla nowego zadania, zresetuj go w sekcji "czasomierz".'}});
+      Utils.HandleError(this, {error: {message: 'The timer is already set. To run it for a new task, reset it in the "timer" section.'}});
     }
   }
 
@@ -79,7 +79,7 @@ export class LearnTaskComponent implements OnInit {
         if (dt.task.isLearnable) {
           this.scheduleRecord = dt;
         } else {
-          this.errorMessage = 'Aby wykonać to zadanie, należy ukończyć wszytskie zadania poprzedzające.';
+          this.errorMessage = 'To complete this task, you must complete all previous tasks.';
           this.error = true;
         }
       }, err => {

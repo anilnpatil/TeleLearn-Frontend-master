@@ -35,7 +35,7 @@ export class StudentListComponent implements OnInit {
   }
 
   OnUserDelete(student: Student) {
-    if (confirm(`Czy na pewno chcesz usunać ucznia ${student.name} ${student.surname} z kursu? Operacja jest nieodwracalna`)) {
+    if (confirm(`Are you sure you want to delete the student? ${student.name} ${student.surname} from course? The operation is irreversible`)) {
       this.courseService.SignOutStudent(this.course.id, student.id).subscribe (
         dt => {
           this.FetchCourse(this.course.id);

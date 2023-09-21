@@ -81,7 +81,7 @@ export class PostComposerComponent implements OnInit, IError {
     if (event.target.files.length > 0) {
       const file = event.target.files[0];
       if (file.size > environment.max_file_size) {
-        alert('Plik może mieć maksymalnie 10 MB!');
+        alert('The file can be a maximum of 10 MB!');
         return;
       }
       this.filesToUpload.push(file);

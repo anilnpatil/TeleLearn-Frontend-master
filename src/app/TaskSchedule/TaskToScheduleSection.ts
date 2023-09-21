@@ -1,3 +1,3 @@
 export enum TaskToScheduleSection {
-    DELAYED = 'zaległe', TO_REPEAT = 'do powtórki', DATE = ''
+    DELAYED = 'delayed', TO_REPEAT = 'for repetition', DATE = ''
 }

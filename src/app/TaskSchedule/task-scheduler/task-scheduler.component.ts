@@ -139,7 +139,7 @@ export class TaskSchedulerComponent implements OnInit, IError {
   }
 
   OnScheduleDelete(schedule: TaskSchedule) {
-    if (confirm('Operacja jest nieodwracalna! Kontynować?')) {
+    if (confirm('The Operation is irreversible! Continue?')) {
       this.taskScheduleService.DeleteSchedule(schedule.id).subscribe(
         dt => {
           this._FetchSchedule();

@@ -72,7 +72,7 @@ export class PostPageComponent implements OnInit {
   }
 
   OnPostDelete() {
-    if (confirm('Operacja jest niedwracalna! Kontynować?')) {
+    if (confirm('The operation is irreversible! Continue?')) {
       this.postService.DeletePost(this.post.id).subscribe(
         dt => this.router.navigate(['board'], {relativeTo: this.activatedRoute.parent}),
         err => {
@@ -97,7 +97,7 @@ export class PostPageComponent implements OnInit {
   }
 
   OnDeleteComment(comment: Comment) {
-    if (confirm('Operacja jest nieodwracalna! Kontynuować?')) {
+    if (confirm('The Operation is irreversible! To continue?')) {
       this.postService.DeleteComment(comment.id).subscribe(
         dt => this._FetchComments(),
         err => {

@@ -9,7 +9,7 @@
                     {{ item.name }}
                 </div>
                 <div class="card-row owner" *ngIf="showOwner">
-                    Prowadzi: <a routerLink="/user/{{ item.owner.id }}"> {{ item.owner.name }} {{ item.owner.surname }} </a>
+                    He leads: <a routerLink="/user/{{ item.owner.id }}"> {{ item.owner.name }} {{ item.owner.surname }} </a>
                 </div>
             </div>
             <i class="material-icons">

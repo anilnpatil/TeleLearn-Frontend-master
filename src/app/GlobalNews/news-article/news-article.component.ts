@@ -40,7 +40,7 @@ export class NewsArticleComponent implements OnInit, IError {
   }
 
   OnDelete() {
-    if (confirm(`Jesteś pewny, że chcesz usunąć artykuł ${this.article.title}?`)) {
+    if (confirm(`Are you sure you want to delete the article? ${this.article.title}?`)) {
       this.newsService.deleteArticle(this.article.id).subscribe(
         dt => {
           this.deleteSuccess = true;

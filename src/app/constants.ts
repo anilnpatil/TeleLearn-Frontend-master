@@ -1,1 +1,1 @@
-export const APP_NAME = 'TeleLearn.it';
+export const APP_NAME = 'NextFirstLearningPortal';

@@ -130,7 +130,7 @@ export class LearnTimerComponent implements OnInit, OnDestroy, IError {
   }
 
   private _NoScheduleError() {
-    Utils.HandleError(this, {error: {message: 'Nie ustawiono czasomierza. Przejdź do sekcji "ucz się" następnie wybierz zadanie i opcję nauki z czasomierzem.'}});
+    Utils.HandleError(this, {error: {message: 'No timer has been set. Go to the "study" section, then select the task and the study timer option.'}});
   }
 
 }

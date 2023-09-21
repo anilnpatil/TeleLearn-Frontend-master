@@ -68,7 +68,7 @@ export class PostBoardComponent implements OnInit {
   }
 
   OnPostDelete(post: Post) {
-    if (confirm('Operacja jest niedwracalna! Kontynować?')) {
+    if (confirm('The operation is irreversible! Continue?')) {
       this.postService.DeletePost(post.id).subscribe(
         dt => this._FetchPosts(this.course.id),
         err => {

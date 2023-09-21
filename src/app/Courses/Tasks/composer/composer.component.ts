@@ -82,7 +82,7 @@ export class ComposerComponent implements OnInit {
   }
 
   OnTaskDelete() {
-    if (confirm('Operacja jest nieodwracalna! Kontynuować?')) {
+    if (confirm('The surgery is irreversible! To continue?')) {
       this.taskService.DeleteTask(this.currentTask.id).subscribe(
         dt => {
           this.taskMode = false;

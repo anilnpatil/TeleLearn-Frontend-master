@@ -34,7 +34,7 @@ export class CourseComponent implements OnInit {
       params => {
         const courseId = params['course-id'];
         if (!courseId) {
-          this.errorMessage = 'Nie podano id kursu';
+          this.errorMessage = 'No course ID provided';
           this.error = true;
         } else {
           this.courseService.GetCourseById(courseId).subscribe (

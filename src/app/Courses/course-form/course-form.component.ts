@@ -93,7 +93,7 @@ export class CourseFormComponent implements OnInit {
   }
 
   OnCourseDelete() {
-    if (confirm('Operacja jest nieodwracalna, kontynuować?')) {
+    if (confirm('The operation is irreversible, continue?')) {
       this.courseService.DeleteCourse(this.course.id).subscribe(
         dt => {
           this.router.navigate(['my-courses']);
